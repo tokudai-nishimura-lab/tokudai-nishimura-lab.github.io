@@ -55,7 +55,7 @@ nav {
     text-align: center;
     background-color: #777; /* ナビゲーションバーの背景色を暗い灰色に設定 */
     color: white;
-    padding: 30px 0px; /* 上下に10ピクセルのパディングを追加 */
+    padding: 0px 0px; /* 上下に10ピクセルのパディングを追加 */
     position:relative; /* 相対位置指定 */
 }
 
@@ -73,9 +73,9 @@ nav li {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     background-color: #777; /* 背景色を追加 */
-    padding: 10px 20px; /* パディングを追加 */
+    padding: 0px 10px; /* パディングを追加 */
     border-radius: 5px; /* 角を丸くする */
     display: inline-block; /* インラインブロック要素として表示 */
     margin: 5px; /* マージンを追加 */
