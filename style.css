@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* ロゴのスタイル設定 */
+.logo {
+    height: 100px; /* ロゴの高さを80ピクセルに設定 */
+    width: auto; /* 幅は自動調整 */
+    padding: 0px 20px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
+    margin-top: -115px; /* 上に5ピクセルのマージンを設定 */
+    position: absolute; /* 絶対位置指定 */
+    left:7%; /* 左端から50%の位置に設定 */
+    transform: translateX(-50%); /* X軸において-50%移動して中央に配置 */
+}
+
+.kitaoka_home{
+    height: 100%; /* ロゴの高さを80ピクセルに設定 */
+    width: 100%; /* 幅は自動調整 */
+    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
+    margin-top: 10px; /* 上に5ピクセルのマージンを設定 */
+    position: relative; /* 絶対位置指定 */
+    left:0%; /* 左端から50%の位置に設定 */
+    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+}
+
+.multi_modal{
+    height: 100%; /* ロゴの高さを80ピクセルに設定 */
+    width: 50%; /* 幅は自動調整 */
+    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
+    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
+    position: relative; /* 絶対位置指定 */
+    left:0%; /* 左端から50%の位置に設定 */
+    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+}
+.VAD_less{
+    height: 100%; /* ロゴの高さを80ピクセルに設定 */
+    width: 50%; /* 幅は自動調整 */
+    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
+    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
+    position: relative; /* 絶対位置指定 */
+    left:0%; /* 左端から50%の位置に設定 */
+    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+}
+.multilingual{
+    height: 100%; /* ロゴの高さを80ピクセルに設定 */
+    width: 50%; /* 幅は自動調整 */
+    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
+    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
+    position: relative; /* 絶対位置指定 */
+    left:0%; /* 左端から50%の位置に設定 */
+    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+}
+
+
+/* ナビゲーションバーのスタイル設定 */
+nav {
+    text-align: center;
+    background-color: #777; /* ナビゲーションバーの背景色を暗い灰色に設定 */
+    color: white;
+    padding: 30px 0px; /* 上下に10ピクセルのパディングを追加 */
+    position:relative; /* 相対位置指定 */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px; /* 右に20ピクセルのマージンを設定 */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    background-color: #777; /* 背景色を追加 */
+    padding: 10px 20px; /* パディングを追加 */
+    border-radius: 5px; /* 角を丸くする */
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin: 5px; /* マージンを追加 */
+    transition: background-color 0.3s; /* 背景色の変化にアニメーションを設定 */
+}
+
+nav a:hover {
+    background-color: #999; /* ホバー時の背景色を変更 */
+}
+
+
+.title h1 {
+    font-size: 28px; /* タイトルのフォントサイズ */
+    text-align: left; /* 中央揃え */
+    margin-bottom: 0; /* 下のマージンをなくす */
+}
+
+.title p {
+    font-size: 16px; /* 説明文のフォントサイズ */
+    text-align: center; /* 中央揃え */
+    margin-top: 0; /* 上のマージンをなくす */
+}
+
+.title {
+    border-bottom: 2px solid black; /* 下線のスタイル */
+    padding-bottom: 10px; /* 下線と文字との間隔 */
+}
+
+
+.main_title h1 {
+    font-size: 40px; /* タイトルのフォントサイズ */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 0; /* 下のマージンをなくす */
+}
+
+.sub_title h1 {
+    font-size: 20px; /* タイトルのフォントサイズ */
+    text-align: left; /* 中央揃え */
+    margin-bottom: 0; /* 下のマージンをなくす */
+}
