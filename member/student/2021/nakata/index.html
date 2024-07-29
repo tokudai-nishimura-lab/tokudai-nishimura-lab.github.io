@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生プロフィール - [あなたの名前]</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .profile-image {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .demo-video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .demo-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/api/placeholder/200/200" alt="プロフィール写真" class="profile-image">
+        <h1>[あなたの名前]</h1>
+        <p>[大学名] [学部/研究科] [学年]年</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>自己紹介</h2>
+            <p>[ここにあなたの自己紹介を書いてください。研究への情熱、学問的興味、将来の目標などを含めると良いでしょう。]</p>
+        </section>
+
+        <section>
+            <h2>研究内容</h2>
+            <p>[ここにあなたの研究テーマ、目的、方法論などを詳しく説明してください。]</p>
+        </section>
+
+        <section>
+            <h2>研究デモ</h2>
+            <div class="demo-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/[YouTube動画ID]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>[動画の説明や補足情報をここに書いてください。]</p>
+        </section>
+
+        <section>
+            <h2>業績</h2>
+            <ul>
+                <li>[論文タイトル1] - [出版情報]</li>
+                <li>[論文タイトル2] - [出版情報]</li>
+                <li>[受賞歴や表彰]</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>スキル</h2>
+            <ul>
+                <li>[プログラミング言語]</li>
+                <li>[ソフトウェアツール]</li>
+                <li>[研究手法]</li>
+            </ul>
+        </section>
+
+        <section class="contact-info">
+            <h2>連絡先</h2>
+            <p>Email: [あなたのメールアドレス]</p>
+            <p>研究室: [研究室の場所や番号]</p>
+            <p>
+                SNS:
+                <a href="[LinkedInプロフィールURL]">LinkedIn</a> |
+                <a href="[GitHubプロフィールURL]">GitHub</a> |
+                <a href="[ResearchGateプロフィールURL]">ResearchGate</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
