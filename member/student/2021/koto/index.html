@@ -1,111 +1,213 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学生プロフィール - [あなたの名前]</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>古藤 快都</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .profile-image {
-            width: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        .contact-info {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .demo-video {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 アスペクト比 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        .demo-video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      .profile-image {
+        width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      section {
+        margin-bottom: 30px;
+      }
+      .contact-info {
+        background-color: #ecf0f1;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      .demo-video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .demo-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="/api/placeholder/200/200" alt="プロフィール写真" class="profile-image">
-        <h1>[あなたの名前]</h1>
-        <p>[大学名] [学部/研究科] [学年]年</p>
+      <img
+        src="/api/placeholder/200/200"
+        alt="プロフィール写真"
+        class="profile-image"
+      />
+      <h1>古藤快都</h1>
+      <p>
+        徳島大学大学院 創成科学研究科 理工学専攻 知能情報システムコース ２年
+      </p>
     </header>
 
     <main>
-        <section>
-            <h2>自己紹介</h2>
-            <p>[ここにあなたの自己紹介を書いてください。研究への情熱、学問的興味、将来の目標などを含めると良いでしょう。]</p>
-        </section>
+      <section>
+        <h2>自己紹介</h2>
+        <p>
+          趣味はランニング（マラソン）&シュミレーションゲーム（「oxygen not included」, 「factorio」）&ヲタ芸（最近はサイリウムダンスって言いますね）&Vtuber鑑賞（最推し「さくらみこ」+ホロライブ+にじさんじーサロメさんまで知ってます）
+          研究内容：クロスリンガル音声合成<br>
+          目標はさくらみこのクロスリンガルTTSを作ることです!<br>
+        </p>
+      </section>
 
-        <section>
-            <h2>研究内容</h2>
-            <p>[ここにあなたの研究テーマ、目的、方法論などを詳しく説明してください。]</p>
-        </section>
+      <section>
+        <h2>研究内容</h2>
+        <p>テーマ：クロスリンガル音声合成</p>
+        <p>
+          私は深層学習技術を使用して、本人が話すことの出来ない言語で発話を合成する多言語音声合成モデルの構築を目指し研究をしています。<br />
+          この目的を達成するためには、複数の言語を話せる人の音声データが必要ですが、このようなデータを集めるのはコストがかかり、対象となる人も限られています。<br />
+          そこで、私たちは、一つの言語でのみ発話できる人の音声データと複数の言語を話せる人の音声データを使って、その人のキャラクターを保ちつつ、別の言語で発話を合成するアプローチを採用しています。<br />
+          この研究での手法としては、日本語や英語の話者だけでなく、バイリンガル（複数の言語を話す）話者の音声も学習データとして使用します。<br />
+          これにより、特定の話者が異なる言語間でどのように発話するかの関係性をモデルに学習させることができます。<br />
+          学習プロセスでは、話者と言語の情報をモデルに明示的に提供し、これを基にモデルを構築します。<br />
+          運用の一例として、もともと日本語のみに対応した音声案内システムがあります。<br />
+          この研究で開発されるモデルを使用すれば、そのシステムを他の言語でも利用可能にし、異なる言語圏の人々にもサービスを提供できるようになります。
+        </p>
+      </section>
 
-        <section>
-            <h2>研究デモ</h2>
-            <div class="demo-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/[YouTube動画ID]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>[動画の説明や補足情報をここに書いてください。]</p>
-        </section>
+      <section>
+        <h2>研究デモ</h2>
+        <h3>音声視聴デモ</h3>
+        <a href="https://demo.kaitts.shop/" >音声視聴デモページ</a>
+        <p>生成した音声のサンプル音声を提供します。</p>
+        <h3>趣味のクロスリンガルTTS</h3>
+        <a href="http://www.kaitts.shop/" >不機嫌なみこ</a>
+        <p>生成した音声のサンプル音声を提供します。</p>
+        <h3>音声視聴デモ</h3>
+        <div class="demo-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/[YouTube動画ID]"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>[動画の説明や補足情報をここに書いてください。]</p>
+      </section>
 
-        <section>
-            <h2>業績</h2>
-            <ul>
-                <li>[論文タイトル1] - [出版情報]</li>
-                <li>[論文タイトル2] - [出版情報]</li>
-                <li>[受賞歴や表彰]</li>
-            </ul>
-        </section>
+      <section>
+        <h2>業績</h2>
+        <h3>著書・論文</h3>
+        <table border="1">
+          <tr>
+            <th>タイトル</th>
+            <th>出版情報</th>
+          </tr>
+          <tr>
+            <td>単言語話者による多言語音声合成モデルの構築と評価</td>
+            <td>
+              日本音響学会 第150回(2023年秋季)研究発表会 ポスターセッション
+            </td>
+          </tr>
+        </table>
+        <h3>受賞歴や表彰</h3>
+        <ul>
+          <li>受賞したいなぁ〜</li>
+      </ul>
+      </section>
 
-        <section>
-            <h2>スキル</h2>
-            <ul>
-                <li>[プログラミング言語]</li>
-                <li>[ソフトウェアツール]</li>
-                <li>[研究手法]</li>
-            </ul>
-        </section>
+      <section>
+        <h2>スキル</h2>
+        <h3>プログラム言語</h3>
+        <table border="1">
+          <tr>
+            <th>スキル/ツール</th>
+            <th>経験年数</th>
+            <th>使用用途</th>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>4年</td>
+            <td>大学の授業で利用</td>
+          </tr>
+          <tr>
+            <td>HTML/CSS</td>
+            <td>2年</td>
+            <td>研究成果等を体験可能なwebページを作成</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>2年</td>
+            <td>大学の授業で利用</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>2年</td>
+            <td>簡易的な動きがあるwebページを作成</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>3年</td>
+            <td>現在研究で利用</td>
+          </tr>
+          <tr>
+            <td>Linux</td>
+            <td>3年</td>
+            <td>研究のプラットフォームとして利用</td>
+          </tr>
+          <tr>
+            <td>AI系ライブラリ</td>
+            <td>2年</td>
+            <td>現在研究で利用</td>
+          </tr>
+          <tr>
+            <td>プロトタイピング環境</td>
+            <td>1年</td>
+            <td>Arduinoを大学の授業で利用</td>
+          </tr>
+        </table>
 
-        <section class="contact-info">
-            <h2>連絡先</h2>
-            <p>Email: [あなたのメールアドレス]</p>
-            <p>研究室: [研究室の場所や番号]</p>
-            <p>
-                SNS:
-                <a href="[LinkedInプロフィールURL]">LinkedIn</a> |
-                <a href="[GitHubプロフィールURL]">GitHub</a> |
-                <a href="[ResearchGateプロフィールURL]">ResearchGate</a>
-            </p>
-        </section>
+        <h3>ソフトウェアツール</h3>
+        <ul>
+          <li>Visual Studio Code</li>
+        </ul>
+
+        <h3>研究手法</h3>
+        <ul>
+          <li>深層学習</li>
+        </ul>
+      </section>
+
+      <section class="contact-info">
+        <h2>連絡先</h2>
+        <p>Email: k.koto.office@gmail.com</p>
+        <p>
+          研究室: 徳島大学 大学院 南常三島キャンパス 知能情報南棟 3階
+        </p>
+        <p>
+          SNS:
+          <a href="[LinkedInプロフィールURL]">LinkedIn</a> |
+          <a href="[https://github.com/Kai1467]">GitHub</a> |
+          <a href="[ResearchGateプロフィールURL]">ResearchGate</a>
+        </p>
+      </section>
     </main>
-</body>
+  </body>
 </html>
