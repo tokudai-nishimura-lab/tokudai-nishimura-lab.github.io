@@ -3,13 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルへのリンク -->
+    <title>研究設備 - 徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .equipment-content {
+            padding: 2rem 0;
+        }
+        .equipment-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .equipment-section h2 {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .equipment-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .equipment-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .equipment-item h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .equipment-item i {
+            color: #007bff;
+        }
+        .equipment-item p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .equipment-specs {
+            background: white;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+        .equipment-specs h4 {
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .equipment-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        .equipment-specs li {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .equipment-specs li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+        @media (max-width: 768px) {
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+            .equipment-section {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main_title">
-        <h1>研究設備</h1>
-    </div>
-    
+    <div id="nav-container"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">研究設備</h1>
+                <p class="fade-in">Equipment</p>
+            </div>
+        </section>
+
+        <section class="equipment-content">
+            <div class="container">
+                <div class="equipment-section">
+                    <h2><i class="fas fa-server"></i> 計算機設備</h2>
+                    <div class="equipment-grid">
+                        <div class="equipment-item">
+                            <h3><i class="fas fa-microchip"></i> GPUサーバー</h3>
+                            <p>深層学習の研究に使用する高性能GPUサーバーを複数台保有しています。</p>
+                            <div class="equipment-specs">
+                                <h4>主な仕様</h4>
+                                <ul>
+                                    <li>NVIDIA A100 GPU</li>
+                                    <li>大容量メモリ</li>
+                                    <li>高速ストレージ</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="equipment-item">
+                            <h3><i class="fas fa-hdd"></i> ストレージサーバー</h3>
+                            <p>大規模な音声・言語データを保存・管理するためのストレージサーバーを運用しています。</p>
+                            <div class="equipment-specs">
+                                <h4>主な仕様</h4>
+                                <ul>
+                                    <li>大容量RAIDストレージ</li>
+                                    <li>高速ネットワーク接続</li>
+                                    <li>バックアップシステム</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-section">
+                    <h2><i class="fas fa-microphone"></i> 音声収録設備</h2>
+                    <div class="equipment-grid">
+                        <div class="equipment-item">
+                            <h3><i class="fas fa-headphones"></i> 収録機材</h3>
+                            <p>高品質な音声データを収録するための各種機材を揃えています。</p>
+                            <div class="equipment-specs">
+                                <h4>主な機材</h4>
+                                <ul>
+                                    <li>高性能マイクロフォン</li>
+                                    <li>オーディオインターフェース</li>
+                                    <li>防音設備</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="equipment-item">
+                            <h3><i class="fas fa-laptop-code"></i> 音声処理ワークステーション</h3>
+                            <p>音声信号処理や音声合成研究のための専用ワークステーションを使用しています。</p>
+                            <div class="equipment-specs">
+                                <h4>主な用途</h4>
+                                <ul>
+                                    <li>音声信号処理</li>
+                                    <li>音声合成</li>
+                                    <li>音声分析</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
+        </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
 </body>
 </html>

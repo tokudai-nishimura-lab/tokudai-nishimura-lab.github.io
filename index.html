@@ -3,10 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tokushima Univ. NISHIMURA LAB</title>
+    <title>徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .home-content {
+            padding: 2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .logo-section img {
+            max-height: 300px;
+            margin: 0 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .logo-section img:hover {
+            transform: translateY(-5px);
+        }
+        .welcome-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        .welcome-section h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .welcome-section p {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .keywords-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            margin: 3rem auto;
+            border-radius: 20px;
+            max-width: 1000px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .keywords-section h2 {
+            color: #007bff;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-size: 2rem;
+            position: relative;
+        }
+        .keywords-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #007bff;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .keyword-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .keyword-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00bfff);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .keyword-box:hover::before {
+            opacity: 1;
+        }
+        .keyword-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .keyword-box .image-container {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 16/9;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .keyword-box:hover .image-container {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+            border-color: rgba(0,123,255,0.3);
+        }
+        .keyword-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+        .keyword-box:hover img {
+            transform: scale(1.05);
+        }
+        .keyword-box h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .keyword-box h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: #007bff;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .keyword-box:hover h3:after {
+            opacity: 1;
+            width: 80px;
+        }
+        .keyword-box p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+        .research-link {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .research-link a {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .research-link a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #0056b3 0%, #004094 100%);
+        }
+        .research-link i {
+            margin-left: 0.8rem;
+        }
+        @media (max-width: 900px) {
+            .keywords-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .keyword-box {
+                padding: 2rem;
+            }
+            .keyword-box .image-container {
+                max-width: 250px;
+            }
+            .keyword-box h3 {
+                font-size: 1.3rem;
+            }
+            .keyword-box p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .logo-section img {
+                max-height: 200px;
+                margin: 0.5rem;
+            }
+            .welcome-section {
+                margin: 1rem;
+            }
+            .keywords-section {
+                margin: 1rem;
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
-<frameset rows="60,*" border="0">
-    <frame src="menu.html" name="menu">
-    <frame src="home.html" name="content">
-</frameset>
+<body>
+    <div id="nav-container"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">リアリティテクノロジ研究室</h1>
+                <h2 class="fade-in">西村グループ</h2>
+                <p class="fade-in">音声言語情報処理・AI・ヒューマンインタフェース</p>
+            </div>
+        </section>
+
+        <section class="home-content">
+            <div class="container">
+                <div class="logo-section">
+                    <img src="./img/logo_a3.png" alt="ロゴ">
+                    <img src="./img/nishimura_2018_800px.jpg" alt="西村" class="nishimura">
+                </div>
+
+                <div class="welcome-section">
+                    <h2>ようこそA3研究室西村グループへ</h2>
+                    <p>リアリティテクノロジ研究室（A3研究室）西村グループ</p>
+                </div>
+
+                <div class="keywords-section">
+                    <h2>研究キーワード</h2>
+                    <div class="keywords-grid">
+                        <div class="keyword-box">
+                            <div class="image-container">
+                                <img src="./img/VAD_less.png" alt="音声認識">
+                            </div>
+                            <h3>音声言語情報処理</h3>
+                            <p>音声認識・合成技術の研究開発</p>
+                        </div>
+                        <div class="keyword-box">
+                            <div class="image-container">
+                                <img src="./img/multi_modal.png" alt="マルチモーダル対話">
+                            </div>
+                            <h3>マルチモーダル対話</h3>
+                            <p>自然な対話インターフェースの実現</p>
+                        </div>
+                        <div class="keyword-box">
+                            <div class="image-container">
+                                <img src="./img/multilingual.png" alt="多言語処理">
+                            </div>
+                            <h3>多言語音声処理</h3>
+                            <p>複数言語に対応した音声処理</p>
+                        </div>
+                        <div class="keyword-box">
+                            <div class="image-container">
+                                <img src="./img/VAD_less.png" alt="自然言語処理">
+                            </div>
+                            <h3>自然言語処理</h3>
+                            <p>テキスト解析と意味理解</p>
+                        </div>
+                    </div>
+                    <div class="research-link">
+                        <a href="./research.html">詳しい研究内容はこちら <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+</body>
 </html>

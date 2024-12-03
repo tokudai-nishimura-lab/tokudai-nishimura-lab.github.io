@@ -1,45 +1,454 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルへのリンク -->
+    <title>研究業績 - 徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .publications-page {
+            padding-bottom: 4rem;
+        }
+
+        .year-nav {
+            background: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 60px;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .year-nav .container {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 0.5rem 1rem;
+        }
+
+        .year-nav a {
+            color: #666;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .year-nav a:hover {
+            background: #f0f0f0;
+            color: #007bff;
+        }
+
+        .year-nav a.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .publication-list {
+            padding: 2rem 0;
+        }
+
+        .year-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .year-section h2 {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+
+        .year-section h3 {
+            color: #333;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .year-section h3 i {
+            color: #007bff;
+        }
+
+        .year-section ol {
+            list-style-position: inside;
+            padding-left: 1rem;
+        }
+
+        .year-section li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .year-nav {
+                top: 180px;
+            }
+
+            .year-section {
+                padding: 1.5rem;
+            }
+
+            .year-section ol {
+                padding-left: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="main_title">
-        <h1>文献リスト</h1>
-    </div>
+    <div id="nav-container"></div>
 
-    <div class="title">
-        <h1>2024</h1>
-    </div>
-    <h3>論文誌</h3>
+    <main class="publications-page">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">研究業績</h1>
+                <p class="fade-in">Publications</p>
+            </div>
+        </section>
 
-    <h3>国際会議</h3>
+        <nav class="year-nav">
+            <div class="container">
+                <a href="#year-2024" data-year="2024" class="active">2024年</a>
+                <a href="#year-2023" data-year="2023">2023年</a>
+                <a href="#year-2022" data-year="2022">2022年</a>
+                <a href="#year-2021" data-year="2021">2021年</a>
+                <a href="#year-2020" data-year="2020">2020年</a>
+                <a href="#year-2019" data-year="2019">2019年</a>
+                <a href="#year-2018" data-year="2018">2018年</a>
+                <a href="#year-2017" data-year="2017">2017年</a>
+            </div>
+        </nav>
 
-    <h3>国内研究会</h3>
-    <ol>
-        <li>江本 城太郎, 西村 良太, 太田 健吾, 北岡 教英, “雑音・無音棄却型リアルタイムVADレス音声認識モデルの開発,” 日本音響学会春季研究発表会, 1-Q-14, Mar., 2024.</li>
-        <li>福永 善理, 西村 良太, 太田 健吾, 北岡 教英, “深層学習を用いた自然な音声対話システムのための相槌表層選択モデルの構築,” 日本音響学会春季研究発表会, 2-P-4, Mar., 2024.</li>
-        <li>今本 麟太朗, 西村 良太, 太田 健吾, 北岡 教英, “相槌生成と話者交替のモデルを組み込んだリアルタイム音声対話システムの構築と評価,” 日本音響学会春季研究発表会, 2-P-6, Mar., 2024.</li>
-    </ol>
+        <section class="publication-list">
+            <div class="container">
+                <div id="year-2024" class="year-section">
+                    <h2>2024年</h2>
 
-    <div class="title">
-        <h1>2023</h1>
-    </div>    
-    <h3>論文誌</h3>
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Keita Kiuchi, Xin Kang, Ryota Nishimura, Manabu Sasayama, Kazuyuki Matsumoto, "Causal
+                            Effects of High Stress Assessed Via Interviews on Mental and Physical Health: Toward
+                            Computer Agent-Driven Stress Assessment," Journal of Occupational and Environmental
+                            Medicine, Vol. 66, No. 7, pp. e285-e295, Jul., 2024.</li>
+                        <li>Daiki Mori, Kengo Ohta, Ryota Nishimura, Atsunori Ogawa, Norihide Kitaoka, "Recognition of
+                            target domain Japanese speech using language model replacement," EURASIP Journal on Audio,
+                            Speech, and Music Processing, Vol. 2024, No. 1, pp. 40, Jul., 2024.</li>
+                        <li>Ryota Nishimura, Takaaki Uno, Taiki Yamamoto, Kengo Ohta, Norihide Kitaoka, "Detection of
+                            Arbitrary Wake Words by Coupling a Phoneme Predictor and a Phoneme Sequence Detector,"
+                            APSIPA Transactions on Signal and Information Processing, Vol. 13, No. 1, pp. 1-21, Aug.,
+                            2024.</li>
+                        <li>鳥井浩平, 西村良太, 誉田栄一, "医用画像AI開発支援ソフトウェアを用いた歯科用CBCT画像における下顎菅のセグメンテーション," 日本歯科放射線学会論文誌, Vol. 64,
+                            No. 1, pp. 11-19, Sep., 2024.</li>
+                    </ol>
 
-    <h3>国際会議</h3>
-    <ol>
-        <li>Aito Nakata, Ryota Nishimura, Kengo Ohta, Norihide Kitaoka, “Development of a Model for Predicting Timing of Back-Channel in a Real-Time Spoken Dialog System,” GCCE2023, (to appear), Oct., 2023.</li>
-    </ol>
-    <h3>国内研究会</h3>    
-    <ol>
-        <li>古藤 快都, 西村 良太, 太田 健吾, 北岡 教英, “単言語話者による多言語音声合成モデルの構築と評価,” 日本音響学会秋季研究発表会, 2-Q-37, Sep., 2023.</li>
-        <li>伊達 龍斗, 太田 健吾, 西村 良太, 北岡 教英, “深層学習による口唇情報を用いた雑音下での音声認識精度の改善,” 日本音響学会講演論文集, 1-3P-3, Mar., 2023.</li>
-        <li>杉山 雅和, 太田 健吾, 西村 良太, 北岡 教英, “割り込み発話にも対応可能なリアルタイム話者交替システム,” 日本音響学会講演論文集, 2-3P-1, Mar., 2023.</li>
-    </ol>
-    
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Kei Daizumoto, N. Osafune, Kouhei Torii, Ryota Nishimura, et al., "Development of pT
+                            classification prediction system in UTUC using deep-learning," 39th Annual European
+                            Association of Urology Congress, Vol. 85, pp. S852-S853, Apr., 2024.</li>
+                        <li>Kei Daizumoto, Kouhei Torii, Ryota Nishimura, Jyunya Furukawa, "Deep learning-based depth
+                            prediction system for upper tract urothelial carcinoma," the 111th Annual Meeting of the
+                            Japanese Urological Association (JUA), pp. PDA_36_05-PDA_36_05, Apr., 2024.</li>
+                        <li>Takanabe, "Multimodal Emotion Recognition and Dataset Construction in Online Counseling,"
+                            Proc. of PACLIC 38, The 38th Pacific Asia Conference on Language, Information and
+                            Computation, Dec., 2024.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>江本城太郎, 西村良太, 太田健吾, 北岡教英, "雑音・無音棄却型リアルタイムVADレス音声認識モデルの開発," 日本音響学会講論集（2024年春）, 1-Q-14, pp.
+                            855-858, Mar., 2024.</li>
+                        <li>福永善理, 西村良太, 太田健吾, 北岡教英, "深層学習を用いた自然な音声対話システムのための相槌表層選択モデルの構築," 日本音響学会講論集（2024年春）, 2-P-4, pp.
+                            949-952, Mar., 2024.</li>
+                        <li>今本麟太朗, 西村良太, 太田健吾, 北岡教英, "相槌生成と話者交替のモデルを組み込んだリアルタイム音声対話システムの構築と評価," 日本音響学会講論集（2024年春）,
+                            2-P-6, pp. 957-960, Mar., 2024.</li>
+                        <li>福田芽衣子, 西村良太, 入部百合絵, 山本一公, 北岡教英, "EARS：日本人超高齢者音声コーパスの構築," 日本音響学会講論集（2024年春）, 1-2-4, pp.
+                            763-766, Mar., 2024.</li>
+                        <li>金井良賢, 若林佑幸, 西村良太, 北岡教英, "円滑な音声対話システムのための発話終了時間の事前推定," 日本音響学会講論集（2024年春）, 2-P-7, pp. 961-964,
+                            Mar., 2024.</li>
+                        <li>早道広峻, 松本和幸, 西村良太, 吉田稔, "雑談機能の追加による対話ロボットを用いた健康維持支援システムの改良," 人工知能学会第38回全国大会講演論文集, 3Xin2-82,
+                            pp. 1-4, May., 2024.</li>
+                        <li>杉山雅和, 西村良太, 太田健吾, 北岡教英, "音響的特徴に基づくターンテイキング予測," 日本音響学会講論集（2024年秋）, 2-Q-48, pp. 1277-1280,
+                            Sep., 2024.</li>
+                        <li>伊達龍斗, 西村良太, 太田健吾, 北岡教英, "深層学習による口唇情報を用いた音声認識の多様なノイズタイプにおける評価," 日本音響学会講論集（2024年秋）, 1-Q-34,
+                            pp. 1149-1152, Sep., 2024.</li>
+                        <li>金井良賢, 若林佑幸, 西村良太, 北岡教英, "wav2vec 2.0 による言語特徴を考慮した音声対話システムへの入力発話の終了時間推定," 日本音響学会講論集（2024年秋）,
+                            2-Q-50, pp. 1283-1284, Sep., 2024.</li>
+                    </ol>
+                </div>
+                <div id="year-2023" class="year-section">
+                    <h2>2023年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Koharu Horii, Kengo Ohta, Ryota Nishimura, Atsunori Ogawa, Norihide Kitaoka, "Language
+                            modeling for spontaneous speech recognition based on disfluency labeling and generation of
+                            disfluent text," 2023 Asia Pacific Signal and Information Processing Association Annual
+                            Summit and Conference (APSIPA ASC), pp. 1851-1856, Oct., 2023.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Aito Nakata, Ryota Nishimura, Kengo Ohta, Norihide Kitaoka, "Development of a model for
+                            predicting timing of back-channel in a real-time spoken dialog system," 2023 IEEE 12th
+                            Global Conference on Consumer Electronics, GCCE 2023, pp. 454-457, Oct., 2023.</li>
+                        <li>Koharu Horii, Kengo Ohta, Ryota Nishimura, Atsunori Ogawa, Norihide Kitaoka, "Language
+                            modeling for spontaneous speech recognition based on disfluency labeling and generation of
+                            disfluent text," 2023 Asia Pacific Signal and Information Processing Association Annual
+                            Summit and Conference (APSIPA ASC), pp. 1851-1856, Oct., 2023.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>古藤快都, 西村良太, 太田健吾, 北岡教英, "単言語話者による多言語音声合成モデルの構築と評価," 日本音響学会講論集（2023年秋）, 2-Q-37, pp.
+                            1267-1270, Sep., 2023.</li>
+                        <li>伊達龍斗, 太田健吾, 西村良太, 北岡教英, "深層学習による口唇情報を用いた雑音下での音声認識精度の改善," 日本音響学会講演論文集, 1-3P-3, pp. 777-780,
+                            Mar., 2023.</li>
+                        <li>杉山雅和, 太田健吾, 西村良太, 北岡教英, "割り込み発話にも対応可能なリアルタイム話者交替システム," 日本音響学会講演論文集, 2-3P-1, pp. 847-850,
+                            Mar., 2023.</li>
+                        <li>熊倉健太, 鳥井浩平, 西村良太, 松本和幸, 吉田稔, "歯科パノラマ X 線画像における歯の状態診断及び汎化性能の検証," FIT2023(第 22 回情報科学技術フォーラム),
+                            G-012, pp. 563-564, Sep., 2023.</li>
+                        <li>長江亮太朗, 鳥井浩平, 西村良太, 松本和幸, 吉田稔, "深層セグメンテーションモデルによる歯科インプラントの自動分類手法," FIT2023(第 22
+                            回情報科学技術フォーラム), G-014, pp. 567-568, Sep., 2023.</li>
+                        <li>本田剛, 鳥井浩平, 西村良太, 吉田稔, 松本和幸, "深層学習モデル TransUNet を用いた 歯科パノラマ X 線画像のセグメンテーション," FIT2023(第 22
+                            回情報科学技術フォーラム), G-016, pp. 571-572, Sep., 2023.</li>
+                    </ol>
+                </div>
+                <div id="year-2022" class="year-section">
+                    <h2>2022年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Ryota Nishimura, Daisuke Yamamoto, Takahiro Uchiya, Ichi Takumi, "MMDAE: Dialog scenario
+                            editor for MMDAgent on the web browser," ICT Express, Vol. 5, No. 1, pp. 47-51, Mar., 2022.
+                        </li>
+                        <li>Norihide Kitaoka, Ryota Nishimura, Kengo Ohta, "フォトリアルCGエージェントとのマルチモーダル対話," 日本音響学会誌, Vol.
+                            78, No. 5, pp. 257-264, May., 2022.</li>
+                        <li>Meiko Fukuda, Ryota Nishimura, Hiromitsu Nishizaki, Koharu Horii, Yurie Iribe, Kazumasa
+                            Yamamoto, Norihide Kitaoka, "A new speech corpus of super-elderly Japanese for acoustic
+                            modeling," Computer Speech & Language, Vol. 101424, pp. 1-12, Jun., 2022.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Naomichi Tabuchi, Kazuyuki Matsumoto, Minoru Yoshida, Ryota Nishimura, Kenji Kita, "Analysis
+                            of Lifestyle Habits from Weblogs of Patients with Intractable Diseases Using Deep Learning,"
+                            Proc. of International Conference on Electrical, Computer, and Energy Technologies (ICECET),
+                            Jul., 2022.</li>
+                        <li>Meiko Fukuda, Masakazu Sugiyama, Ryota Nishimura, Norihide Kitaoka, "A Corpus-based Analysis
+                            of Age-related Changes in the Acoustic Features of Elderly to Super Elderly Speech," The
+                            O-COCOSDA 2022, Nov., 2022.</li>
+                        <li>Junya Furutani, Xin Kang, Ryota Nishimura, Manabu Sasayama, Kazuyuki Matsumoto, "Learning a
+                            Bimodal Emotion Recognition System Based on Small Amount of Speech Data," 2022 8th
+                            International Conference on Systems and Informatics, pp. 160-164, Dec., 2022.</li>
+                        <li>Tomoki Kusunose, Xin Kang, Keita Kiuchi, Ryota Nishimura, Manabu Sasayama, Kazuyuki
+                            Matsumoto, "Facial Expression Emotion Recognition Based on Transfer Learning and Generative
+                            Model," 2022 8th International Conference on Systems and Informatics, pp. 107-112, Dec.,
+                            2022.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>堀井こはる, 福田芽衣子, 太田健吾, 西村良太, 小川厚徳, 北岡教英, "End-to-End 非流暢整形音声認識システムの対話音声による評価,"
+                            日本音響学会講論集（2022年秋）, 2-8-5, pp. 1155-1156, Sep., 2022.</li>
+                        <li>森大輝, 太田健吾, 西村良太, 北岡教英, "ドメイン外音響情報で補強した Encoder-Decoder 音声認識モデルの設計," 日本音響学会講論集（2022年秋）,
+                            2-Q-26, pp. 1229-1232, Sep., 2022.</li>
+                        <li>福田芽衣子, 杉山雅和, 西村良太, 入部百合絵, 山本一公, 北岡教英, "超高齢者コーパスとS-JNAS を用いた高齢者音声の音響的特徴の分析,"
+                            日本音響学会講論集（2022年秋）, 3-Q-32, pp. 1395-1398, Sep., 2022.</li>
+                        <li>鳥井章宏, 西村良太, 北岡教英, "音声対話システムにおける対話破綻検出器の構築," 令和4年度 電気・電子・情報関係学会 四国支部連合大会 講演論文集, 15-8, pp.
+                            145-145, Sep., 2022.</li>
+                        <li>福村考洋, 西村良太, 北岡教英, "BERT による雑談対話話題拡張," 令和4年度 電気・電子・情報関係学会 四国支部連合大会 講演論文集, 15-9, pp. 146-146,
+                            Sep., 2022.</li>
+                    </ol>
+                </div>
+
+                <div id="year-2021" class="year-section">
+                    <h2>2021年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Kengo Ohta, Ryota Nishimura, Norihide Kitaoka, "Response Type Selection for Chat-like Spoken
+                            Dialog Systems Based on LSTM and Multi-task Learning," Speech Communication, Vol. 133, pp.
+                            23-30, Oct., 2021.</li>
+                        <li>Zolzaya Byambadorj, Ryota Nishimura, Altangerel Ayush, Kengo Ohta, Norihide Kitaoka,
+                            "Text-to-speech system for low-resource language using cross-lingual transfer learning and
+                            data augmentation," EURASIP Journal on Audio, Speech, and Music Processing, Vol. 2021, No.
+                            42, pp. 1-20, Dec., 2021.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Zolzaya Byambadorj, Ryota Nishimura, Altangerel Ayush, Kengo Ohta, Norihide Kitaoka,
+                            "Multi-speaker TTS system for low-resource language using cross-lingual transfer learning
+                            and data augmentation," Proceedings, APSIPA Annual Summit and Conference 2021, pp. 849-853,
+                            Dec., 2021.</li>
+                        <li>Daiki Mori, Kengo Ohta, Ryota Nishimura, Atsunori Ogawa, Norihide Kitaoka, "Advanced
+                            language model fusion method for encoder-decoder model in Japanese speech recognition,"
+                            Proceedings, APSIPA Annual Summit and Conference 2021, pp. 503-510, Dec., 2021.</li>
+                        <li>Koharu Horii, Meiko Fukuda, Kengo Ohta, Ryota Nishimura, Atsunori Ogawa, Norihide Kitaoka,
+                            "End-to-End Spontaneous Speech Recognition Using Hesitation Labeling," Proceedings, APSIPA
+                            Annual Summit and Conference 2021, pp. 1077-1081, Dec., 2021.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>太田健吾, 西村良太, 北岡教英, "アクセント句を考慮した日本語End-to-End音声合成サーバの構築," 日本音響学会講論集（2021年春）, 1-2-7, pp.
+                            797-798, Mar., 2021.</li>
+                        <li>北岡教英, 西村良太, 太田健吾, 原直, 石川晃之, 石川友香, 中野涼太, 田中五大, 鍋倉彩那, 佐藤辰耶, 渡邊凌太, 大須賀晋,
+                            "フォトリアルCGエージェントとのマルチモーダル対話システムの構築," 日本音響学会講論集（2021年春）, 1-2-6, pp. 793-796, Mar., 2021.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-book-reader"></i> 著書</h3>
+                    <ol>
+                        <li>北研二, 西村良太, 松本和幸, "【Pythonでゼロからはじめる】 AI・機械学習のためのデータ前処理[入門編]," 科学情報出版, pp. 1-154, 2021.</li>
+                    </ol>
+                </div>
+
+                <div id="year-2020" class="year-section">
+                    <h2>2020年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Norihide Kitaoka, Eichi Seto, Ryota Nishimura, "Example Phrase Adaptation Method for
+                            Customized, Example-Based Dialog System Using User Data and Distributed Word
+                            Representations," IEICE Transactions on Information and Systems, Vol. E103-D, No. 11, pp.
+                            2332-2339, Nov., 2020.</li>
+                        <li>Jiahao Chen, Ryota Nishimura, Norihide Kitaoka, "End-to-End Recognition of Streaming
+                            Japanese Speech Using CTC and Local Attention," APSIPA Transactions on Signal and
+                            Information Processing, Vol. 9, pp. 1-7, Nov., 2020.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Meiko Fukuda, Hiromitsu Nishizaki, Yurie Iribe, Ryota Nishimura, Norihide Kitaoka,
+                            "Improving Speech Recognition for the Elderly: A New Corpus of Elderly Japanese Speech and
+                            Investigation of Acoustic Modeling for Speech Recognition," Proceedings of the 12th
+                            Conference on Language Resources and Evaluation (LREC 2020), pp. 6578-6585, May., 2020.</li>
+                        <li>Jiahao Chen, Ryota Nishimura, Norihide Kitaoka, "E2E Streaming Speech Recognition Using CTC
+                            and Local Attention," Proc. NCSP'20, pp. 1-4, Mar., 2020.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>清原侃太, 西村良太, 北岡教英, "音声と指差しの統合理解によるマルチモーダル幾何問題解答システムの構築," 情報処理学会第82回全国大会講演論文集, 5F-03, pp. 5-6,
+                            Mar., 2020.</li>
+                        <li>五藤智晃, 西村良太, 北研二, "深層学習モデルによる音響ベクトル系列から文書ベクトル系列へのメディア横断マッピング," 情報処理学会第82回全国大会講演論文集, 4Q-05,
+                            pp. 181-182, Mar., 2020.</li>
+                        <li>陳家浩, 西村良太, 北岡教英, "Uni-directional LSTMとLocal Attentionを用いたストリーミング音声認識," 日本音響学会講論集（2020年春）,
+                            2-Q-12, pp. 943-946, Mar., 2020.</li>
+                    </ol>
+                </div>
+
+                <div id="year-2019" class="year-section">
+                    <h2>2019年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Ryota Nishimura, Daisuke Yamamoto, Takahiro Uchiya, Ichi Takumi, "Web-based environment for
+                            user generation of spoken dialog for virtual assistants," EURASIP Journal on Audio, Speech,
+                            and Music Processing, Vol. 2018, pp. 1-13, Nov., 2019.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Taiki Yamamoto, Ryota Nishimura, Masayuki Misaki, Norihide Kitaoka, "Small-footprint magic
+                            word detection method using convolutional LSTM neural network," Proceedings of the Annual
+                            Conference of the International Speech Communication Association, INTERSPEECH, pp.
+                            2035-2039, Sep., 2019.</li>
+                        <li>Komatsu Akihisa, Nishimura Ryota, Kitaoka Norihide, "Environmental Sounds Recognition with
+                            Convolutional-LSTM," 2019 IEEE 8th Global Conference on Consumer Electronics, GCCE 2019, pp.
+                            717-719, Oct., 2019.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>梅原靖之, 西村良太, 北岡教英, "様々な対話戦略を統合した音声対話システムの構築法," 日本音響学会講論集（2019年春）, 2-P-1, pp. 945-948, Mar.,
+                            2019.</li>
+                        <li>梶並和明, 西村良太, 入部百合絵, 北岡教英, "音声対話破綻検出手法の開発に向けた音声対話データ収録システム," 日本音響学会講論集（2019年春）, 2-P-2, pp.
+                            949-952, Mar., 2019.</li>
+                        <li>清原侃太, 西村良太, 北岡教英, "幾何問題における音声と指差しを用いた学習支援システムの構築とその評価," 日本音響学会講論集（2019年春）, 2-P-17, pp.
+                            989-992, Mar., 2019.</li>
+                    </ol>
+                </div>
+
+                <div id="year-2018" class="year-section">
+                    <h2>2018年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>Ryota Nishimura, "The Sixth IEEE GlobalConference on Consumer Electronics," IEEE Consumer
+                            Electronics Magazine, Vol. 7, No. 3, pp. 2-4, 2018.</li>
+                        <li>Norihide Kitaoka, Shuhei Segawa, Ryota Nishimura, Kazuya Takeda, "Recognizing emotions from
+                            speech using a physical model," Acoustical Science and Technology, Vol. 39, No. 2, pp.
+                            167-170, Mar., 2018.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-globe"></i> 国際会議</h3>
+                    <ol>
+                        <li>Ryota Nishimura, Miho Higaki, Norihide Kitaoka, "Mapping Acoustic Vector Space and Document
+                            Vector Space by RNN-LSTM," 2018 IEEE 7th Global Conference on Consumer Electronics, GCCE
+                            2018, pp. 296-297, Oct., 2018.</li>
+                        <li>Kazuaki Kajinami, Ryota Nishimura, Norihide Kitaoka, "Construction of dialog database for
+                            development of spoken dialog breakdown detection methods," ICAICTA-2018, pp. 1-5, Aug.,
+                            2018.</li>
+                        <li>Meiko Fukuda, Ryota Nishimura, Norihide Kitaoka, Hiromitsu Nishizaki, Yurie Iribe,
+                            "Construction of a Corpus for Elderly Japanese Speech Recognition," 2018 IEEE 7th Global
+                            Conference on Consumer Electronics, GCCE 2018, pp. 652-653, Oct., 2018.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>瀬戸栄地, 西村良太, 北岡教英, "単語の分散表現に基づく事例ベース雑談音声対話システムのユーザ適応," 日本音響学会講論集（2018年春）, 2-8-8, pp. 49-52,
+                            Mar., 2018.</li>
+                        <li>梶並和明, 西村良太, 北岡教英, "音声対話破綻検出手法の開発に向けた対話データベースの構築," 日本音響学会講論集（2018年春）, 2-Q-14, pp. 177-180,
+                            Mar., 2018.</li>
+                        <li>中川拓磨, 西村良太, 入部百合絵, 石黒祥生, 大須賀晋, 北岡教英, "自動運転車の操作におけるマルチモーダルインタラクション," 日本音響学会講論集（2018年春）,
+                            2-8-10, pp. 57-60, Mar., 2018.</li>
+                    </ol>
+                </div>
+
+                <div id="year-2017" class="year-section">
+                    <h2>2017年</h2>
+
+                    <h3><i class="fas fa-book"></i> 論文誌</h3>
+                    <ol>
+                        <li>瀬戸栄地, 西村良太, 北岡教英, "回想法を指向した事例ベース雑談音声対話システムにおける単語の分散表現を用いたユーザへの事例適応," 電子情報通信学会技術研究報告, Vol.
+                            117, pp. 23-28, Oct., 2017.</li>
+                        <li>太田健吾, 西村良太, 北岡教英, "発話の分散表現に基づく雑談音声対話システムの応答種別選択," 研究報告音声言語情報処理（SLP）, Vol. 2017-SLP-1, pp.
+                            1-5, Dec., 2017.</li>
+                    </ol>
+
+                    <h3><i class="fas fa-file-alt"></i> 国内研究会</h3>
+                    <ol>
+                        <li>瀬戸栄地, 西村良太, 北岡教英, "回想法を指向した事例ベース雑談音声対話システムにおける単語の分散表現を用いたユーザへの事例適応," 電子情報通信学会技術研究報告, Vol.
+                            117, pp. 23-28, Oct., 2017.</li>
+                        <li>太田健吾, 西村良太, 北岡教英, "発話の分散表現に基づく雑談音声対話システムの応答種別選択," 研究報告音声言語情報処理（SLP）, Vol. 2017-SLP-1, pp.
+                            1-5, Dec., 2017.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
+        </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/publications.js"></script>
 </body>
+
 </html>

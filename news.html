@@ -3,13 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルへのリンク -->
+    <title>ニュース - 徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .news-content {
+            padding: 2rem 0;
+        }
+        .news-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .news-section h2 {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .news-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .news-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e9ecef;
+        }
+        .news-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .news-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: #007bff;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #007bff;
+        }
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .news-date i {
+            color: #007bff;
+        }
+        .news-title {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .news-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        .news-tag {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .tag-conference {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .tag-award {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+        .tag-publication {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        .tag-event {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        @media (max-width: 768px) {
+            .news-section {
+                padding: 1rem;
+            }
+            .news-timeline {
+                padding-left: 1.5rem;
+            }
+            .news-item::before {
+                left: -1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main_title">
-        <h1>ニュース</h1>
-    </div>
-    
+    <div id="nav-container"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">ニュース</h1>
+                <p class="fade-in">News</p>
+            </div>
+        </section>
+
+        <section class="news-content">
+            <div class="container">
+                <div class="news-section">
+                    <h2><i class="fas fa-newspaper"></i> 最新情報</h2>
+                    <div class="news-timeline">
+                        <article class="news-item">
+                            <div class="news-date">
+                                <i class="far fa-calendar"></i>
+                                2024年3月15日
+                            </div>
+                            <span class="news-tag tag-conference">学会発表</span>
+                            <h3 class="news-title">日本音響学会2024年春季研究発表会で発表を行いました</h3>
+                            <p class="news-description">
+                                日本音響学会2024年春季研究発表会にて、音声認識と対話システムに関する研究発表を行いました。
+                            </p>
+                        </article>
+
+                        <article class="news-item">
+                            <div class="news-date">
+                                <i class="far fa-calendar"></i>
+                                2024年2月1日
+                            </div>
+                            <span class="news-tag tag-publication">論文掲載</span>
+                            <h3 class="news-title">国際論文誌に論文が採択されました</h3>
+                            <p class="news-description">
+                                音声認識に関する研究論文がEURASIP Journal on Audio, Speech, and Music Processingに採択されました。
+                            </p>
+                        </article>
+
+                        <article class="news-item">
+                            <div class="news-date">
+                                <i class="far fa-calendar"></i>
+                                2024年1月15日
+                            </div>
+                            <span class="news-tag tag-event">イベント</span>
+                            <h3 class="news-title">研究室見学会を開催しました</h3>
+                            <p class="news-description">
+                                学部3年生を対象とした研究室見学会を開催し、研究内容や研究室の雰囲気を紹介しました。
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
+        </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
 </body>
 </html>

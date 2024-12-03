@@ -3,57 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルへのリンク -->
+    <title>研究内容 - 徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .research-content {
+            padding: 2rem 0;
+        }
+        .research-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .research-section h2 {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .research-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .research-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .research-item:hover {
+            transform: translateY(-5px);
+        }
+        .research-item h3 {
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        .research-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
+    <div id="nav-container"></div>
 
-    <div class="main_title">
-        <h1>研究内容</h1>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">研究内容</h1>
+                <p class="fade-in">Research</p>
+            </div>
+        </section>
 
-    <div class="title">
-        <h1>音声認識</h1>
-    </div>
+        <section class="research-content">
+            <div class="container">
+                <div class="research-section">
+                    <h2>音声言語情報処理</h2>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <h3>音声認識</h3>
+                            <img src="./img/VAD_less.png" alt="音声認識の研究">
+                            <p>深層学習を用いた高精度な音声認識システムの研究開発を行っています。特に、リアルタイム性を重視した音声認識や、雑音環境下での頑健な認識を実現するための研究を進めています。</p>
+                        </div>
+                        <div class="research-item">
+                            <h3>マルチモーダル対話</h3>
+                            <img src="./img/multi_modal.png" alt="マルチモーダル対話の研究">
+                            <p>音声だけでなく、画像や動作などの複数のモダリティを統合した自然な対話システムの研究を行っています。人間らしい対話を実現するための技術開発に取り組んでいます。</p>
+                        </div>
+                        <div class="research-item">
+                            <h3>多言語音声処理</h3>
+                            <img src="./img/multilingual.png" alt="多言語音声処理の研究">
+                            <p>複数の言語に対応した音声認識・合成システムの研究開発を行っています。特に、低リソース言語への対応や、言語間の転移学習に関する研究を進めています。</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="sub_title">
-        <h1>マルチモーダル音声認識</h1>
-    </div>
+                <div class="research-section">
+                    <h2>研究キーワード</h2>
+                    <ul>
+                        <li>音声認識・音声合成</li>
+                        <li>音声対話システム</li>
+                        <li>マルチモーダル対話</li>
+                        <li>自然言語処理</li>
+                        <li>深層学習</li>
+                        <li>高齢者音声処理</li>
+                        <li>多言語音声処理</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <img src="./img/multi_modal.png" alt="伊達" class="multi_modal">
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
+        </div>
+    </footer>
 
-    <div class="sub_title">
-        <h1>VADレス音声認識</h1>
-    </div>
-
-    <img src="./img/VAD_less.png" alt="江本" class="VAD_less">
-
-
-    <div class="title">
-        <h1>音声合成</h1>
-    </div>
-
-    <div class="sub_title">
-        <h1>単言語話者による多言語音声合成</h1>
-    </div>
-
-    <img src="./img/multilingual.png" alt="古藤" class="multilingual">
-
-    <div class="sub_title">
-        <h1>韻律的強調箇所が指定可能な音声合成</h1>
-    </div>
-
-
-    <div class="title">
-        <h1>音声対話システム</h1>
-    </div>
-
-    <div class="title">
-        <h1>高齢者音声データベース</h1>
-    </div>
-
-    <div class="title">
-        <h1>その他</h1>
-    </div>
+    <script src="./js/common.js"></script>
 </body>
 </html>

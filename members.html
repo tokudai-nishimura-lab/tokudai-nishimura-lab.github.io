@@ -3,102 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base target="_blank">
-    <title>ホーム</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルへのリンク -->
+    <title>メンバー - 徳島大学 西村研究室</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .members-content {
+            padding: 2rem 0;
+        }
+        .member-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .member-section h2 {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .member-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .member-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .member-info {
+            padding: 1.5rem;
+        }
+        .member-info h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .member-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .member-info .position {
+            color: #007bff;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .member-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .member-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .member-links a:hover {
+            color: #007bff;
+        }
+        @media (max-width: 768px) {
+            .member-grid {
+                grid-template-columns: 1fr;
+            }
+            .member-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="main_title">
-        <h1>研究室メンバー</h1>
-    </div>
+    <div id="nav-container"></div>
 
-    <div class="title">
-        <h1>教員</h1>
-    </div>
-    <ul>
-        <li>西村良太 講師 <a href="https://sayonari.com/">[HP]</a></li>
-    </ul>
-    <p></p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">メンバー</h1>
+                <p class="fade-in">Members</p>
+            </div>
+        </section>
 
-    <div class="title">
-        <h1>外部教員</h1>
-    </div>
-    <ul>
-        <li>北岡教英 教授（豊橋技術科学大学） <a href="https://sites.google.com/site/norihidekitaokashome/home">[HP]</a></li>
-        <li>太田健吾 准教授（阿南高専） <a href="">[HP]</a></li>
-    </ul>
+        <section class="members-content">
+            <div class="container">
+                <div class="member-section">
+                    <h2><i class="fas fa-chalkboard-teacher"></i> 教員</h2>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="./img/nishimura_2018_800px.jpg" alt="西村良太" class="member-image">
+                            <div class="member-info">
+                                <h3>西村 良太</h3>
+                                <p class="position">講師</p>
+                                <p>専門: 音声言語情報処理</p>
+                                <div class="member-links">
+                                    <a href="member/teacher/nishimura/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="title">
-        <h1>博士課程</h1>
-    </div>
-    <ul>
-        <li>Purevdorj Narangerel (D3)</li>
-    </ul>
+                <div class="member-section">
+                    <h2><i class="fas fa-user-graduate"></i> 学生</h2>
+                    <div class="member-grid">
+                        <!-- M2 Students -->
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="杉山 雅和" class="member-image">
+                            <div class="member-info">
+                                <h3>杉山 雅和</h3>
+                                <p class="position">M2</p>
+                                <div class="member-links">
+                                    <a href="member/student/2021/sugiyama/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="大本 隼也" class="member-image">
+                            <div class="member-info">
+                                <h3>大本 隼也</h3>
+                                <p class="position">M2</p>
+                                <div class="member-links">
+                                    <a href="member/student/2021/ohmoto/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="伊達 龍斗" class="member-image">
+                            <div class="member-info">
+                                <h3>伊達 龍斗</h3>
+                                <p class="position">M2</p>
+                                <div class="member-links">
+                                    <a href="member/student/2021/date/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="中田 愛刀" class="member-image">
+                            <div class="member-info">
+                                <h3>中田 愛刀</h3>
+                                <p class="position">M2</p>
+                                <div class="member-links">
+                                    <a href="member/student/2021/nakata/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="古藤 快都" class="member-image">
+                            <div class="member-info">
+                                <h3>古藤 快都</h3>
+                                <p class="position">M2</p>
+                                <div class="member-links">
+                                    <a href="member/student/2021/koto/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="title">
-        <h1>修士2年(M2)</h1>
-    </div>
-    <ul>
-        <li>杉山雅和</li>
-        <li>伊達龍斗</li>
-        <li><a href="./member/student/2021/koto/index.html">古藤快都</a></li>
-        <li>中田愛刀</li>
-        <li>大本隼也</li>
-    </ul>
+                        <!-- M1 Students -->
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="福永 善理" class="member-image">
+                            <div class="member-info">
+                                <h3>福永 善理</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/fukunaga/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="日下部 龍太" class="member-image">
+                            <div class="member-info">
+                                <h3>日下部 龍太</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/kusakabe/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="江本 城太郎" class="member-image">
+                            <div class="member-info">
+                                <h3>江本 城太郎</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/emoto/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="梶浦 倫太朗" class="member-image">
+                            <div class="member-info">
+                                <h3>梶浦 倫太朗</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/kajiura/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="久米 健太" class="member-image">
+                            <div class="member-info">
+                                <h3>久米 健太</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/kume/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="今本 麟太朗" class="member-image">
+                            <div class="member-info">
+                                <h3>今本 麟太朗</h3>
+                                <p class="position">M1</p>
+                                <div class="member-links">
+                                    <a href="member/student/2022/imamoto/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="title">
-        <h1>修士1年(M1)</h1>
-    </div>
-    <ul>
-        <li>福永善理</li>
-        <li>江本城太郎</li>
-        <li>今本麟太朗</li>
-        <li>梶浦倫太朗</li>
-        <li>久米健太</li>
-        <li>日下部龍太</li>
-    </ul>    
+                        <!-- B4 Students -->
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="田中 旭陽" class="member-image">
+                            <div class="member-info">
+                                <h3>田中 旭陽</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/tanaka/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="中山 要" class="member-image">
+                            <div class="member-info">
+                                <h3>中山 要</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/nakayama/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="福田 悠人" class="member-image">
+                            <div class="member-info">
+                                <h3>福田 悠人</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/fukuta/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="川村 初生" class="member-image">
+                            <div class="member-info">
+                                <h3>川村 初生</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/kawamura/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="佐藤 菜羽" class="member-image">
+                            <div class="member-info">
+                                <h3>佐藤 菜羽</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/sato/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="杉本 飛馬" class="member-image">
+                            <div class="member-info">
+                                <h3>杉本 飛馬</h3>
+                                <p class="position">B4</p>
+                                <div class="member-links">
+                                    <a href="member/student/2023/sugimoto/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="title">
-        <h1>学部4年(B4)</h1>
-    </div>
-    <ul>
-        <li>杉本飛馬</li>
-        <li>田中旭陽</li>
-        <li>中山要</li>
-        <li>川村初生</li>
-        <li>福田悠人</li>
-        <li>佐藤菜羽</li>
-    </ul>
+                        <!-- B3 Students -->
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="加藤 碧" class="member-image">
+                            <div class="member-info">
+                                <h3>加藤 碧</h3>
+                                <p class="position">B3</p>
+                                <div class="member-links">
+                                    <a href="member/student/2024/kato/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="横山 順" class="member-image">
+                            <div class="member-info">
+                                <h3>横山 順</h3>
+                                <p class="position">B3</p>
+                                <div class="member-links">
+                                    <a href="member/student/2024/yokoyama/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="河野 日向大" class="member-image">
+                            <div class="member-info">
+                                <h3>河野 日向大</h3>
+                                <p class="position">B3</p>
+                                <div class="member-links">
+                                    <a href="member/student/2024/kono/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-card">
+                            <img src="./img/profile/icon_Pika.png" alt="藤江 利宇" class="member-image">
+                            <div class="member-info">
+                                <h3>藤江 利宇</h3>
+                                <p class="position">B3</p>
+                                <div class="member-links">
+                                    <a href="member/student/2024/fujie/index.html"><i class="fas fa-user"></i> プロフィール</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="title">
-        <h1>学部3年(B3)</h1>
-    </div>
-    <ul>
-        <li>河野日向大</li>
-        <li>加藤碧</li>
-        <li>藤江利宇</li>
-        <li>横山順</li>
-    </ul>
-
-    <div class="title">
-        <h1>過去メンバー</h1>
-    </div>
-    <details>
-        <summary>「クリックして過去メンバーを表示」</summary>
-        <div class="title">
-            <h1>2023年度 修了・卒業</h1>
+    <footer>
+        <div class="container">
+            <p>© 2024 徳島大学 西村研究室 All Rights Reserved.</p>
+            <p>〒770-8506 徳島県徳島市南常三島町2-1</p>
         </div>
-        <h3>修士</h3>
-        <ul>
-            <li>修士 卒業太郎</li>
-        </ul>
-        <h3>学部</h3>
-        <ul>
-            <li>学部 卒業太郎</li>
-        </ul>
-    </details>
+    </footer>
 
-    <BR><BR><BR><BR>
-    
+    <script src="./js/common.js"></script>
 </body>
 </html>

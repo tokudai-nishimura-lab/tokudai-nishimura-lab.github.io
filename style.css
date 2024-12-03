@@ -1,118 +1,211 @@
-/* styles.css */
-
-/* ロゴのスタイル設定 */
-.logo {
-    height: 100px; /* ロゴの高さを80ピクセルに設定 */
-    width: auto; /* 幅は自動調整 */
-    padding: 0px 20px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
-    margin-top: -115px; /* 上に5ピクセルのマージンを設定 */
-    position: absolute; /* 絶対位置指定 */
-    left:7%; /* 左端から50%の位置に設定 */
-    transform: translateX(-50%); /* X軸において-50%移動して中央に配置 */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.kitaoka_home{
-    height: 100%; /* ロゴの高さを80ピクセルに設定 */
-    width: 100%; /* 幅は自動調整 */
-    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
-    margin-top: 10px; /* 上に5ピクセルのマージンを設定 */
-    position: relative; /* 絶対位置指定 */
-    left:0%; /* 左端から50%の位置に設定 */
-    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-.multi_modal{
-    height: 100%; /* ロゴの高さを80ピクセルに設定 */
-    width: 50%; /* 幅は自動調整 */
-    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
-    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
-    position: relative; /* 絶対位置指定 */
-    left:0%; /* 左端から50%の位置に設定 */
-    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
-}
-.VAD_less{
-    height: 100%; /* ロゴの高さを80ピクセルに設定 */
-    width: 50%; /* 幅は自動調整 */
-    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
-    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
-    position: relative; /* 絶対位置指定 */
-    left:0%; /* 左端から50%の位置に設定 */
-    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
-}
-.multilingual{
-    height: 100%; /* ロゴの高さを80ピクセルに設定 */
-    width: 50%; /* 幅は自動調整 */
-    padding: 0px 0px; /* 上下に10ピクセル、左右に20ピクセルのパディングを追加 */
-    margin-top: 0px; /* 上に5ピクセルのマージンを設定 */
-    position: relative; /* 絶対位置指定 */
-    left:0%; /* 左端から50%の位置に設定 */
-    transform: translateX(0%); /* X軸において-50%移動して中央に配置 */
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.8rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
 }
 
-
-/* ナビゲーションバーのスタイル設定 */
-nav {
-    text-align: center;
-    background-color: #777; /* ナビゲーションバーの背景色を暗い灰色に設定 */
-    color: white;
-    padding: 0px 0px; /* 上下に10ピクセルのパディングを追加 */
-    position:relative; /* 相対位置指定 */
+.nav-brand {
+    display: flex;
+    align-items: center;
 }
 
-nav ul {
-    list-style-type: none;
+.nav-logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px; /* 右に20ピクセルのマージンを設定 */
+.nav-links li {
+    margin: 0 0.5rem;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.nav-links a.active {
+    background-color: #007bff;
     color: white;
-    font-size: 20px;
-    background-color: #777; /* 背景色を追加 */
-    padding: 0px 10px; /* パディングを追加 */
-    border-radius: 5px; /* 角を丸くする */
-    display: inline-block; /* インラインブロック要素として表示 */
-    margin: 5px; /* マージンを追加 */
-    transition: background-color 0.3s; /* 背景色の変化にアニメーションを設定 */
 }
 
-nav a:hover {
-    background-color: #999; /* ホバー時の背景色を変更 */
+.nav-links i {
+    margin-right: 0.4rem;
 }
 
-
-.title h1 {
-    font-size: 28px; /* タイトルのフォントサイズ */
-    text-align: left; /* 中央揃え */
-    margin-bottom: 0; /* 下のマージンをなくす */
+/* Hero Section */
+.hero {
+    height: 200px; /* 高さを半分に調整 */
+    background: linear-gradient(135deg, #0396FF 0%, #ABDCFF 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
 }
 
-.title p {
-    font-size: 16px; /* 説明文のフォントサイズ */
-    text-align: center; /* 中央揃え */
-    margin-top: 0; /* 上のマージンをなくす */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./img/logo_a3.png') center/contain no-repeat;
+    opacity: 0.1;
+    animation: pulse 4s infinite;
 }
 
-.title {
-    border-bottom: 2px solid black; /* 下線のスタイル */
-    padding-bottom: 10px; /* 下線と文字との間隔 */
+@keyframes pulse {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.15; }
+    100% { opacity: 0.1; }
 }
 
-
-.main_title h1 {
-    font-size: 40px; /* タイトルのフォントサイズ */
-    text-align: center; /* 中央揃え */
-    margin-bottom: 0; /* 下のマージンをなくす */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
 }
 
-.sub_title h1 {
-    font-size: 20px; /* タイトルのフォントサイズ */
-    text-align: left; /* 中央揃え */
-    margin-bottom: 0; /* 下のマージンをなくす */
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Main Content */
+main {
+    padding-bottom: 4rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-brand {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0.3rem 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem;
+    }
+
+    .hero {
+        height: 150px;
+        margin-top: 180px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 2rem; }
+.mt-4 { margin-top: 2rem; }
